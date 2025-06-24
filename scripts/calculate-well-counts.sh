@@ -3,8 +3,8 @@
 # To calculate well counts for Fig2B
 
 ## To run script
-	## parallel -j8 "bash fastq_to_wellcounts.sh" {} :::: references/paths.txt
-	## Input paths.txt is a file of all the fastq filepaths.  
+	## parallel -j8 "bash fastq_to_wellcounts.sh" {} :::: references/igvf-sequence-files.txt
+	## Input references/igvf-sequence-files.txt is a file of all the fastq IGVF filepaths.  
 
 # Export function to be used by GNU parallel
 gs_path="$1"
