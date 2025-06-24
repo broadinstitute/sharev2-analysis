@@ -8,6 +8,7 @@
 	## SparK.py: weten https://raw.githubusercontent.com/harbourlab/SparK/refs/heads/master/SparK.py
 	## GNU parallel: https://ftpmirror.gnu.org/parallel/parallel-latest.tar.bz2
 	## samtools: https://www.htslib.org/download
+	## results/barcode_celltype.txt is an output of DORCs in the main-analysis.ipynb notebook
 
 
 echo "Merging BAM files."
