@@ -8,13 +8,14 @@
 
 # Export function to be used by GNU parallel
 gs_path="$1"
+gs_path=$(echo "$gs_path" | tr -d '\r' | xargs)
 filename=$(basename "$gs_path")
 outfile="../well-counts/${filename%.fastq.gz}.counts.txt"
 
 echo "Processing $filename..."
 
-curl -L "$gs_path" - | \
-zcat - | \
+curl -L -o - "$gs_path" | \
+gzcat - | \
 awk 'NR % 4 == 2' | \
 cut -c116-123 | \
 rev | tr 'ACGT' 'TGCA' | \
